@@ -12,8 +12,10 @@
 
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/faviconApple.png" type="image/png">
-
+  <link rel="stylesheet"  href="lib/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="styles/index.css">
+
+  <script src="scripts/index.js" type="module"></script>
 </head>
 <body>
   <header class="header">
@@ -77,10 +79,10 @@
         <h2 class="goods__title">Все продукты новой линейки</h2>
 
         <div class="goods__helper">
-          <div class="goods__block">
-            <ul class="goods__list">
-              <li class="goods__item">
-                <article class="goods__product product">
+          <div class="goods__block swiper">
+            <ul class="goods__list swiper-wrapper">
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product ">
                   <div class="product__image-wrapper">
                     <img src="img/iPhone14-pro.png" alt="iPhonePro" class="product__img" width="200px" height="200px">
                   </div>
@@ -96,8 +98,8 @@
                   </button>
                 </article>
               </li>
-              <li class="goods__item">
-                <article class="goods__product product">
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product ">
                   <div class="product__image-wrapper">
                     <img src="img/iPhone14.png" alt="iPhone 14" class="product__img" width="200px" height="200px">
                   </div>
@@ -113,8 +115,8 @@
                   </button>
                 </article>
               </li>
-              <li class="goods__item">
-                <article class="goods__product product">
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product ">
                   <div class="product__image-wrapper">
                     <img src="img/AirPodsPro.png" alt="AirPods Pro" class="product__img" width="200px" height="200px">
                   </div>
@@ -130,8 +132,8 @@
                   </button>
                 </article>
               </li>
-              <li class="goods__item">
-                <article class="goods__product product">
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product ">
                   <div class="product__image-wrapper">
                     <img src="img/apple_watch_ultra.png" alt="AppleWatch Ultra" class="product__img" width="200px" height="200px">
                   </div>
@@ -147,8 +149,8 @@
                   </button>
                 </article>
               </li>
-              <li class="goods__item">
-                <article class="goods__product product">
+              <li class="goods__item swiper-slide">
+                <article class="goods__product product ">
                   <div class="product__image-wrapper">
                     <img src="img/apple-watch-series-8.png" alt="Apple Watch Series 8" class="product__img" width="200px" height="200px">
                   </div>
@@ -166,9 +168,9 @@
               </li>
             </ul>
 
-            <button class="goods__arrow goods__arrow_prew"></button>
-            <button class="goods__arrow goods__arrow_next"></button>
           </div>
+          <button class="goods__arrow goods__arrow_prew"></button>
+          <button class="goods__arrow goods__arrow_next"></button>
         </div>
       </div>
     </section>
@@ -176,9 +178,9 @@
     <section class="features" id="features">
       <div class="container">
         <p class="features__tagline">Мы становимся лучше. Для вас</p>
-        <h2 class="features_title">Характеристики iPhone 14</h2>
-        <div class="features_wrapper">
-          <img fearures__image src="img/iPhone.png" alt="iPhone">
+        <h2 class="features__title">Характеристики iPhone&nbsp;14</h2>
+        <div class="features__wrapper">
+          <img class="features__image"  src="img/iPhone.png" alt="iPhone">
 
           <ul class="features__list">
             <li class="features__item">

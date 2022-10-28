@@ -14,7 +14,9 @@
     flex-basis: 100%;
 }
 @media (min-width: 560px) {
-
+    .header{
+        padding: 24px 0;
+    }
     .header__logo{
         margin-right: auto;
     }
