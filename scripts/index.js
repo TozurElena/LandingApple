@@ -1,5 +1,7 @@
 import Swiper from "../lib/swiper-bundle.esm.browser.min.js";
 
+
+//slider
 new Swiper('.goods__block', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -22,5 +24,37 @@ new Swiper('.goods__block', {
     navigation: {
         nextEl: '.goods__arrow_next',
         prevEl: '.goods__arrow_prew',
+    },
+    preventClicks: true,
+    a11y: false
+});
+
+//modal
+const productMore = document.querySelectorAll('.product__more');
+const modal = document.querySelector('.modal');
+
+productMore.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        modal.classList.add('modal_open');
+    })
+});
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.remove('modal_open');
     }
 });
+
+const formPlaceholder = document.querySelectorAll('.form__placeholder');
+const formInput = document.querySelectorAll('.form__input');
+
+formInput.forEach((input, i) => {
+    input.addEventListener('focus', () => {
+        formPlaceholder[i].classList.add('form__placeholder_active')
+    });
+    input.addEventListener('blur', () => {
+        if (input.value === '') {
+            formPlaceholder[i].classList.remove('form__placeholder_active')
+        }
+
+    })
+})
