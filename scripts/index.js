@@ -81,3 +81,22 @@ counrtyWrapper.addEventListener('click', ({target}) => {
     }
 });
 
+//price-currency
+const dataCurrency = {};
+
+const formatCurrency = (value, currency) => {
+    return new Intl.NumberFormat('EU', {
+        style: 'currency',
+        currency,
+        maximumFractionDigits: 2,
+    }).format(value)
+}
+
+const showPrice = (currency = 'USD')=> {
+    const priceElems = document.querySelectorAll('[data-price]');
+    priceElems.forEach(elem => {
+        elem.textContent = formatCurrency(elem.dataset.price, currency);
+    })
+}
+
+showPrice();
