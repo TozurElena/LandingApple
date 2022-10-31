@@ -15,6 +15,7 @@
 
 ### Useful links:
 - [Swiper is the most modern free mobile touch slider](https://swiperjs.com)
+- [Custom scrollbars made simple, lightweight, easy to use and cross-browser](https://grsmto.github.io/simplebar/)
 
 
 ## Hosting
