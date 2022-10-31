@@ -13,8 +13,10 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/faviconApple.png" type="image/png">
   <link rel="stylesheet"  href="lib/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="lib/simplebar.css">
   <link rel="stylesheet" href="styles/index.css">
 
+  <script src="lib/simplebar.min.js" defer></script>
   <script src="scripts/index.js" type="module"></script>
 </head>
 <body>
@@ -33,16 +35,24 @@
       </nav>
       <div class="header__country country">
         <button class="country__btn">Страна</button>
-        <ul class="country__list">
-          <li class="country__item">
-            <button class="country__btn">Russia, RUB</button></li>
-          <li class="country__item">
-            <button class="country__btn">USA, USD</button></li>
-          <li class="country__item">
-            <button class="country__btn">Germany, EURO</button></li>
-          <li class="country__item">
-            <button class="country__btn">Great Britain, GBP</button></li>
-        </ul>
+        <div class="country__wrapper">
+          <ul class="country__list">
+            <li class="country__item">
+              <button class="country__choise" data-currency="RUB">Russia, RUB</button></li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="USD">USA, USD</button></li>
+            <li class="country__item">
+              <button class="country__choise data-currency="EURO">Germany, EURO</button></li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="GBP">Great Britain, GBP</button></li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="AUD">Australia, AUD</button></li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="KZT">Kazakhstan, KZT</button></li>
+            <li class="country__item">
+              <button class="country__choise" data-currency="UAH">Ukraine, UAH</button></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>

@@ -1,5 +1,13 @@
 import Swiper from "../lib/swiper-bundle.esm.browser.min.js";
 
+//simpleBar
+
+new SimpleBar(document.querySelector('.country__list'), {
+    classNames: {
+        scrollbar: 'country__scrollbar',
+        track: 'country__track'
+    }
+});
 
 //slider
 new Swiper('.goods__block', {
@@ -58,3 +66,18 @@ formInput.forEach((input, i) => {
 
     })
 })
+
+//choices
+const countryBtn = document.querySelector('.country__btn');
+const counrtyWrapper = document.querySelector('.country__wrapper');
+
+countryBtn.addEventListener('click', () => {
+    counrtyWrapper.classList.toggle('country__wrapper_open')
+})
+
+counrtyWrapper.addEventListener('click', ({target}) => {
+    if (target.classList.contains('country__choise')) {
+        counrtyWrapper.classList.remove('country__wrapper_open');
+    }
+});
+

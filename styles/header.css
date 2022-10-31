@@ -27,9 +27,10 @@
     }
 }
 @media (min-width: 1024px) {
-    .header {
+    .header, .country__btn {
         font-size: 20px;
     }
+
     .header__navigation{
         margin-right: 84px;
     }
