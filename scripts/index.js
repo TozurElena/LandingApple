@@ -67,20 +67,6 @@ formInput.forEach((input, i) => {
     })
 })
 
-//choices
-const countryBtn = document.querySelector('.country__btn');
-const counrtyWrapper = document.querySelector('.country__wrapper');
-
-countryBtn.addEventListener('click', () => {
-    counrtyWrapper.classList.toggle('country__wrapper_open')
-})
-
-counrtyWrapper.addEventListener('click', ({target}) => {
-    if (target.classList.contains('country__choise')) {
-        counrtyWrapper.classList.remove('country__wrapper_open');
-    }
-});
-
 //price-currency
 const dataCurrency = {};
 
@@ -95,8 +81,38 @@ const formatCurrency = (value, currency) => {
 const showPrice = (currency = 'USD')=> {
     const priceElems = document.querySelectorAll('[data-price]');
     priceElems.forEach(elem => {
-        elem.textContent = formatCurrency(elem.dataset.price, currency);
+        elem.textContent = formatCurrency(elem.dataset.price * dataCurrency[currency], currency);
     })
 }
+const myHeaders = new Headers();
+myHeaders.append("apikey", "esv6WoM6ndklAgZUaG9LXTzH2OqXonbG");
 
-showPrice();
+const requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
+};
+
+fetch("https://api.apilayer.com/fixer/latest?base=USD", requestOptions)
+    .then(response => response.json())
+    .then(result => {
+        console.log(result);
+        Object.assign(dataCurrency, result.rates);
+        showPrice();
+    })
+    .catch(error => console.log('error', error));
+
+//choices
+const countryBtn = document.querySelector('.country__btn');
+const counrtyWrapper = document.querySelector('.country__wrapper');
+
+countryBtn.addEventListener('click', () => {
+    counrtyWrapper.classList.toggle('country__wrapper_open')
+})
+
+counrtyWrapper.addEventListener('click', ({target}) => {
+    if (target.classList.contains('country__choise')) {
+        counrtyWrapper.classList.remove('country__wrapper_open');
+        showPrice(target.dataset.currency)
+    }
+});
