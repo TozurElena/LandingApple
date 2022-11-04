@@ -6,6 +6,7 @@
 - Slider 
 - Custom scrollbars
 - API
+- Timer
 
 ## Technology used
 
