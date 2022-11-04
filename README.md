@@ -20,6 +20,7 @@
 - [Swiper is the most modern free mobile touch slider](https://swiperjs.com)
 - [Custom scrollbars made simple, lightweight, easy to use and cross-browser](https://grsmto.github.io/simplebar/)
 - [Fixer API - Foreign exchange rates and currency conversion JSON API](https://apilayer.com/marketplace/fixer-api)
+- [Склонение числительных](https://codepen.io/Quper/pen/zYGxbJm)
 
 
 ## Hosting
