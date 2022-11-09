@@ -148,9 +148,9 @@ const timer = deadline => {
         unitHour.textContent = timer.hours;
         unitMin.textContent = timer.minutes;
         //todo ecrire en russe - 19 min lesson bonus
-        unitDescriptionDay.textContent = declOfNum(timer.days, ['', '', '']);
-        unitDescriptionHour.textContent = declOfNum(timer.hours, ['', '', '']);
-        unitDescriptionMin.textContent = declOfNum(timer.minutes, ['minuta', '', 'minut']);
+        unitDescriptionDay.textContent = declOfNum(timer.days, ['день', 'дня', 'дней']);
+        unitDescriptionHour.textContent = declOfNum(timer.hours, ['час', 'часа', 'часов']);
+        unitDescriptionMin.textContent = declOfNum(timer.minutes, ['минута', 'минуты', 'минут']);
 
         const timerId = setTimeout(start, 60000);
 
